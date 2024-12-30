@@ -146,7 +146,7 @@ images_with_data = [
     
     {"image_path": "Images/16.png", "description": "Description for Image 16", "code_snippet": "plt.style.use('dark_background')\nplt.figure(figsize=(8.3, 8))\ncolors = plt.cm.Paired(range(len(range_counts)))\nwedges, texts = plt.pie(range_counts, startangle=140, colors=colors, wedgeprops={'edgecolor': 'black', 'linewidth': 0.5}, radius=1.2)\nplt.legend(labels=[f'{label}: {count}' for label, count in zip(range_counts.index, range_counts)], loc='center left', bbox_to_anchor=(1, 0.5), title='WPM Ranges', fontsize=12, facecolor='black', edgecolor='white', title_fontsize=20, labelcolor='white', borderaxespad=3, borderpad=5)\nplt.title('Distribution of WPM', fontsize=20, fontweight='bold', color='white', pad=40)\nplt.subplots_adjust(top=0.85)\nplt.tight_layout()\nplt.show()"}
 ]
-st.markdown("# Pictorial Analysis")
+st.markdown("### Pictorial Analysis")
 create_grid_with_code(images_with_data)
 
 # Key Metrics Section
@@ -158,7 +158,7 @@ Total_sec = df['total_time'].sum()
 Total_hrs = str(datetime.timedelta(seconds=int(Total_sec)))
 
 
-st.markdown("# Key Metrics on Average")
+st.markdown("### Key Metrics on Average")
 metric1, metric2, metric3, metric4, metric5 = st.columns(5)
 
 with metric1:
@@ -174,7 +174,7 @@ with metric5:
 
 # Streamlit interface - Prediction Section
 st.markdown("---")
-st.markdown("# My Typing Speed Prediction")
+st.markdown("### My Typing Speed Prediction")
 
 with open('Model/wpm_model_xgb.pkl', 'rb') as f:
     model = pickle.load(f)
@@ -250,7 +250,7 @@ st.markdown("---")
 
 # Header
 
-st.markdown("# Additional Options")
+st.markdown("### Additional Options")
 
 row = st.columns([3, 3, 2]) 
 
@@ -343,7 +343,7 @@ with row[1]:
             st.error("Please enter valid numeric values for typing speed and word count.")
 
 with row[2]:
-    st.title("Medium Post")
+    st.markdown("### Medium Post")
     st.image("Images/thumbnail1.jpg", width=450) 
     button_1 = st.button("Medium link", key="redirect_1")
     if button_1:
