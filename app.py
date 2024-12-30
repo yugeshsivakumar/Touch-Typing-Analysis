@@ -271,7 +271,7 @@ box_content = """
 download_button_shown = False
 
 with row[0]:
-    st.markdown("### Your Speed Analysis")
+    st.markdown("### Your WPM Analysis")
     uploaded_file = st.file_uploader(
         "Upload your CSV file from the Monkeytype website for your analysis.", 
         type=["csv"]
@@ -346,8 +346,16 @@ with row[1]:
 with row[2]:
     st.markdown("### Medium Post")
     st.image("Images/thumbnail1.jpg", width=450)
-    if st.button("Medium link", key="redirect_1"):
-        webbrowser.open_new_tab("https://medium.com/@Yugesh_S")
+    st.markdown(
+        """
+        <a href="https://medium.com/@Yugesh_S" target="_blank" style="text-decoration: none;">
+            <button style="background-color: #4CAF50; color: white; border: none; padding: 10px 20px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; cursor: pointer;">
+                Medium link
+            </button>
+        </a>
+        """,
+        unsafe_allow_html=True,
+    )
 
 # Footer Quote
 st.markdown(
