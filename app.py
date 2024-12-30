@@ -170,7 +170,7 @@ with metric3:
 with metric4:
     st.metric("Total hrs spend", f"{Total_hrs} hrs")
 with metric5:
-    st.metric("Highest WPM", f"{df["wpm"].max()} WPM")
+    st.metric("Highest WPM", f"{df['wpm'].max()} WPM")
 
 # Streamlit interface - Prediction Section
 st.markdown("---")
