@@ -107,7 +107,7 @@ def create_grid_with_code(images_with_data):
             if idx < len(images_with_data):
                 img_data = images_with_data[idx]
                 with cols_layout[col]:
-                    st.image(img_data["image_path"], use_column_width=True, caption=f"Analysis {idx + 1}")
+                    st.image(img_data["image_path"], use_container_width=True, caption=f"Analysis {idx + 1}")
                     
                     with st.expander(f"Code Snippet"):
                         st.code(img_data["code_snippet"], language="python")
