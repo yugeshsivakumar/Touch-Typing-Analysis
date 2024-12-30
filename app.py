@@ -8,6 +8,7 @@ import zipfile
 import datetime
 from datetime import timedelta
 import matplotlib.pyplot as plt
+import webbrowser
 
 st.set_page_config(page_title="Touch Typing Analysis", layout="wide")
 
@@ -344,10 +345,9 @@ with row[1]:
 
 with row[2]:
     st.markdown("### Medium Post")
-    st.image("Images/thumbnail1.jpg", width=450) 
-    button_1 = st.button("Medium link", key="redirect_1")
-    if button_1:
-        st.markdown('<meta http-equiv="refresh" content="0;URL=\'https://medium.com/@Yugesh_S\'">', unsafe_allow_html=True)
+    st.image("Images/thumbnail1.jpg", width=450)
+    if st.button("Medium link", key="redirect_1"):
+        webbrowser.open_new_tab("https://medium.com/@Yugesh_S")
 
 # Footer Quote
 st.markdown(
