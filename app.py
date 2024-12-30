@@ -270,7 +270,7 @@ box_content = """
 download_button_shown = False
 
 with row[0]:
-    st.title("Your Speed Analysis")
+    st.markdown("### Your Speed Analysis")
     uploaded_file = st.file_uploader(
         "Upload your CSV file from the Monkeytype website for your analysis.", 
         type=["csv"]
@@ -322,7 +322,7 @@ with row[0]:
             )
 
 with row[1]:
-    st.title("Time Difference Comparison")
+    st.markdown("### Time Difference Comparison")
     
     standard_speed = overall_averages['wpm']
 
