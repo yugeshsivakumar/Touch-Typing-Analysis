@@ -344,18 +344,27 @@ with row[1]:
             st.error("Please enter valid numeric values for typing speed and word count.")
 
 with row[2]:
-    st.markdown("### Medium Post")
-    st.image("Images/thumbnail1.jpg", width=450)
-    st.markdown(
-        """
-        <a href="https://medium.com/@Yugesh_S" target="_blank" style="text-decoration: none;">
-            <button style="background-color: #4CAF50; color: white; border: none; padding: 10px 20px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; cursor: pointer;">
-                Medium link
-            </button>
-        </a>
-        """,
-        unsafe_allow_html=True,
-    )
+    st.markdown("""
+        <div style="text-align: center;">
+            <h3>Medium Post</h3>
+            <img src="Images/thumbnail1.jpg" alt="Thumbnail" style="width: 450px; margin-bottom: 20px;">
+            <a href="https://medium.com/@Yugesh_S" target="_blank" style="text-decoration: none;">
+                <button style="
+                    background-color: #FF4B4B;
+                    color: white;
+                    border: none;
+                    padding: 10px 20px;
+                    border-radius: 8px;
+                    font-size: 16px;
+                    cursor: pointer;
+                    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                    transition: transform 0.2s, box-shadow 0.2s;
+                " onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 6px 10px rgba(0, 0, 0, 0.15)';" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 6px rgba(0, 0, 0, 0.1)';">
+                    Medium Link
+                </button>
+            </a>
+        </div>
+    """, unsafe_allow_html=True)
 
 # Footer Quote
 st.markdown(
