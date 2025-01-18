@@ -348,7 +348,7 @@ with row[2]:
     st.image("Images/thumbnail1.jpg", width=450)
     st.markdown(
         """
-        <a href="https://medium.com/@Yugesh_S" target="_blank" style="text-decoration: none;">
+        <a href="https://medium.com/@Yugesh_S/is-it-hard-to-reach-100-wpm-in-22-hours-heres-how-i-did-it-5b3a94b4a4db" target="_blank" style="text-decoration: none;">
             <button style="background-color: #e34040; color: white; border: none; padding: 10px 20px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; cursor: pointer;">
                 Medium link
             </button>
